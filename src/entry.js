@@ -18,21 +18,12 @@ var App = React.createClass({
   render: function() {
     return(
       <div className='app'>
-        <Layout
-          headerContent={'header content'}
-          footerContent={'footer content'}>
 
-          Hello World
-          <br/>
-          <img src={image} />
+        Testing! Maybe Kill Patrick??
 
-          <Svg src={svg} />
+        <canvas id={"myCanvas"} width={"200"} height={"100"} style={{"border":"1px solid #000000"}}>
+        </canvas>
 
-          <img src={svg} />
-
-
-
-        </Layout>
       </div>
     )
   }
