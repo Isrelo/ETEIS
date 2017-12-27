@@ -1,0 +1,70 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.block-wrapper {
+  display: inline-block;
+}
+.code-block-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.image-wrapper {
+  width: 48px;
+  height: 44px;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-connector {
+  width: 48px;
+  height: 8px;
+  top: 2px;
+  display: block;
+  position: relative;
+  background-image: url("../images/TopConnector.png");
+}
+.left-connector {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-image: url("../images/LeftArrow.png");
+}
+.bottom-connector {
+  width: 48px;
+  height: 8px;
+  margin: 11px 48px 0px 0px;
+  display: block;
+  background-color: white;
+  background-image: url("../images/BottomConnector.png");
+}
+.right-connector {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-image: url("../images/RightArrow.png");
+}
+.control-label {
+  padding: 0px 8px 0px 8px;
+  margin: 8px 0px 0px 0px;
+  color: white;
+}
+.content-wrapper {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+}
+.code-function {
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+}
