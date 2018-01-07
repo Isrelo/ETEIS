@@ -48,7 +48,7 @@
                                                           .appendTo( '#cardPile' )
                                                           .draggable({
                         containment: '#content',
-                        stack: '#cardPile div',
+                        stack: '#cardPile div', // Make sure the currently dragged object is on top.
                         cursor: 'move',
                         revert: true   // Move the object back to where it started from if you don't drop it correcly. 
                     });
