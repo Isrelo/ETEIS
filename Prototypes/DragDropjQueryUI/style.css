@@ -98,12 +98,13 @@ h1, h2, h3, h4{
 #card10.correct { background: violet; }
 
 #successMessage{
-    top: 250px;
-    left: 580px;
+    top: 50%;
+    left: 50%;
     width: 0px;
     height: 0px;
     padding: 20px 20px 20px 20px;
-    position: absolute;
+    position: fixed;
+    transform: translate(-50%, -50%);
     z-index: 100;
     background: #dfd;
     border: 2px solid #333;
