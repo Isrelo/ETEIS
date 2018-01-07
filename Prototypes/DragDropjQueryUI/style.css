@@ -1,0 +1,116 @@
+/* Add some margin to the page and set a default font and color */
+body{
+    margin: 30px;
+    font-family: "Georgia", serif;
+    line-height: 1.8em;
+    color: #333;
+}
+
+/* Give headings their own font. */
+h1, h2, h3, h4{
+    font-family: "Lucida Sans Unicode", "Lucida Crande", sans-serif;
+}
+
+/* Main content area. */
+#content{
+    margin: 80px 70px 80px 70px;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-selct: none;
+    user-select: none;
+}
+
+/* Slots for final card positions. */
+#cardSlots{
+    margin: 50px auto 0px auto;
+    background: #DDFF;
+}
+
+/* The initial pile of unsorted cards. */
+#cardPile{
+    margin: 0px auto 0px auto;
+    background: #FFD;
+}
+
+
+#cardSlots, #cardPile{
+    width: 910px;
+    height: 120px;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8); 
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);     
+}
+
+/* Individual cards and slots */
+#cardSlots div, #cardPile div{
+    width: 58px;
+    height: 78px;
+    padding: 40px 10px 10px 0px;
+    margin: 0px 0px 0px 10px;
+    display: inline-block;
+    border: 2px solid #333;
+    background: #FFF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius:10px;
+    border-radius: 10px;
+}
+
+#cardSlots div:first-child, #cardPile div:first-child{
+    margin-left: 0px;
+}
+
+#cardSlots div.hovered {
+    background: #AAA;
+}
+
+#cardSlots div{
+    border-style: dashed;
+}
+
+#cardPile div{
+    background: #666;
+    color: #FFF;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+}
+
+#cardPile div.ui-draggable-dragging{
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Individually colored cards */
+#card1.correct { background: red; }
+#card2.correct { background: brown; }
+#card3.correct { background: orange; }
+#card4.correct { background: yellow; }
+#card5.correct { background: green; }
+#card6.correct { background: cyan; }
+#card7.correct { background: blue; }
+#card8.correct { background: indigo; }
+#card9.correct { background: purple; }
+#card10.correct { background: violet; }
+
+#successMessage{
+    top: 250px;
+    left: 580px;
+    width: 0px;
+    height: 0px;
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    z-index: 100;
+    background: #dfd;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+}

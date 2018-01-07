@@ -23,8 +23,8 @@
             function init(){
 
                 // Hide the success message.
-                $('#sucessMessage').hide();
-                $('#sucessMessage').css({
+                $('#successMessage').hide();
+                $('#successMessage').css({
                     left: '580px',
                     top: '250px',
                     width: 0,
@@ -93,8 +93,8 @@
                 // If all the cards have been placed correctly then display a message
                 // and reset the cards for another go.
                 if( correctCards == 10 ){
-                    $('#sucessMessage').show();
-                    $('#sucessMessage').animate({
+                    $('#successMessage').show();
+                    $('#successMessage').animate({
                         left: '380px',
                         top: '200px',
                         width: '400px',
@@ -115,7 +115,7 @@
             <div id="cardPile"> </div>
             <div id="cardSlots"> </div>
 
-            <div id="sucessMessage">
+            <div id="successMessage">
                 <h2>You did it!</h2>
                 <button onclick="init()">Play Again</button>
             </div>
