@@ -50,17 +50,17 @@
                         containment: '#content',
                         stack: '#cardPile div',
                         cursor: 'move',
-                        revert: true    
+                        revert: true   // Move the object back to where it started from if you don't drop it correcly. 
                     });
                 }
 
                 // Create the card slots.
                 var words = ['one', 'two', 'three', 'four', 'six', 'seven', 'eight', 'nine', 'ten'];
 
-                for(var count = 0; count <= 10; count++)
+                for(var count = 1; count <= 10; count++)
                 {
                     $('<div>' + words[count - 1] + '</div>').data( 'number', count)
-                                                            .appendTo( 'cardSlots' )
+                                                            .appendTo( '#cardSlots' )
                                                             .droppable({
                         accept: '#cardPile div',
                         hoverClass: 'hovered',
