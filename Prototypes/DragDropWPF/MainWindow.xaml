@@ -1,0 +1,103 @@
+﻿<Window x:Class="DragAndDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragAndDrop"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" 
+        Width="800">
+    <Grid ShowGridLines="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="MouseCordX_lbl" Grid.Row="0" Content="X_Cord:" VerticalAlignment="Center" />
+            <TextBox x:Name="MouseCordX_txtb" Grid.Row="0" Text="0" VerticalAlignment="Center"/>
+            <Label x:Name="MouseCordY_lbl" Grid.Row="0" Content="Y_Cord:" VerticalAlignment="Center"/>
+            <TextBox x:Name="MouseCordY_txtb" Grid.Row="0" Text="0" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Left Panel -->
+        <Grid Grid.Column="0" Grid.Row="1">
+
+            <Canvas>
+                <Canvas.Background>
+                    <DrawingBrush TileMode="Tile"
+                                  Viewport="0,0,40,40"
+                                  ViewportUnits="Absolute">
+                        <DrawingBrush.Drawing>
+                            <GeometryDrawing>
+                                <GeometryDrawing.Geometry>
+                                    <RectangleGeometry Rect="0,0,40,40" />
+                                </GeometryDrawing.Geometry>
+                                <GeometryDrawing.Pen>
+                                    <Pen Brush="Gray"
+                                         Thickness="1"/>
+                                </GeometryDrawing.Pen>
+                            </GeometryDrawing>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </Canvas.Background>
+                
+                <Rectangle x:Name="SquareDropTarget"
+                       Width="200"
+                       Height="200"
+                       Fill="Green"
+                       AllowDrop="True"
+                       Drop="SquareDropTarget_Drop"/>
+            </Canvas>
+
+        </Grid>
+
+        <!-- Right Panel -->
+        <Grid Grid.Column="1" Grid.Row="1">
+
+            <DockPanel x:Name="DragablePiece_dp"
+                       Width="200"
+                       Height="200">
+
+                <!-- Top Anchor -->
+                <Rectangle x:Name="TopAnchorSqr" 
+                           Height="50"
+                           Fill="Orange"
+                           DockPanel.Dock="Top"/>
+
+                <!-- Bottom Anchor -->
+                <Rectangle x:Name="BottomAnchorSqr" 
+                           Height="50"
+                           Fill="Blue"
+                           DockPanel.Dock="Bottom"/>
+                
+                <!-- Left Anchor -->
+                <Rectangle x:Name="LeftAnchorSqr" 
+                           Width="50"
+                           Fill="Red"
+                           DockPanel.Dock="Left"/>
+
+                <!-- Right Anchor -->
+                <Rectangle x:Name="RightAnchorSqr" 
+                           Width="50"
+                           Fill="Green"
+                           DockPanel.Dock="Right"/>
+
+                <!-- Center Anchor -->
+                <Rectangle x:Name="CenterAnchorSqr" 
+                           Fill="Indigo"/>
+
+            </DockPanel>
+
+        </Grid>
+        
+    </Grid>
+    
+</Window>
